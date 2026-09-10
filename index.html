@@ -137,6 +137,275 @@
     background: var(--gold);
     color: var(--dark);
   }
+
+  /* ── CANON DE ACCESO SECTION ── */
+  .canon-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
+  }
+
+  .canon-section__inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 72px 36px;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+
+  .canon-bridge {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  .canon-eyebrow {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .canon-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+
+  .canon-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .canon-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .canon-card {
+    background: var(--dark);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: border-color .25s;
+  }
+
+  .canon-card:hover { border-color: var(--gold); }
+
+  .canon-card__icon {
+    color: var(--gold);
+    width: 40px; height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(218,186,107,0.08);
+    border-radius: 8px;
+    flex-shrink: 0;
+    margin-bottom: 4px;
+  }
+
+  .canon-card__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    line-height: 1.1;
+  }
+
+  .canon-card__text {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 960px) {
+    .canon-section__inner {
+      grid-template-columns: 1fr;
+      padding: 48px 24px;
+      gap: 40px;
+    }
+    .canon-cards { grid-template-columns: 1fr; }
+  }
+
+  /* ── FORM SECTION ── */
+  .form-section {
+    background: var(--mid);
+    border-top: 1px solid var(--border);
+  }
+
+  .form-section__inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 72px 36px 80px;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .form-section__eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .form-section__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .form-section__desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  /* Form styles */
+  .vip-form { display: flex; flex-direction: column; gap: 20px; }
+
+  .vip-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .vip-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .vip-form__field label,
+  .vip-form__group-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .vip-form__field input,
+  .vip-form__field select,
+  .vip-form__prefix {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color .2s;
+    width: 100%;
+  }
+
+  .vip-form__field input:focus,
+  .vip-form__field select:focus {
+    border-color: var(--gold);
+  }
+
+  .vip-form__field input::placeholder { color: var(--muted); }
+
+  .vip-form__phone-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .vip-form__prefix { width: 110px; flex-shrink: 0; }
+  .vip-form__phone-row input { flex: 1; }
+
+  .vip-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .vip-form__checks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .vip-form__check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .vip-form__check input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--gold);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .vip-form__legal {
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  .vip-form__legal a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .vip-form__legal a:hover { text-decoration: underline; }
+
+  .vip-form__submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #DABA6B 0%, #F5D796 50%, #DABA6B 100%);
+    background-size: 200%;
+    color: #0D1220;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 15px 32px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    transition: background-position .3s, transform .15s;
+    margin-top: 4px;
+  }
+
+  .vip-form__submit:hover { background-position: right center; transform: translateY(-1px); }
+
+  @media (max-width: 900px) {
+    .form-section__inner { grid-template-columns: 1fr; padding: 48px 24px; gap: 40px; }
+    .vip-form__row { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -167,7 +436,6 @@
       <p data-es="Disfruta de una vista privilegiada del Estadio desde los Balcony Seats." data-en="Enjoy a privileged view of the stadium from the Balcony Seats." data-ca="Gaudeix d'una vista privilegiada de l'Estadi des dels Balcony Seats.">Disfruta de una vista privilegiada del Estadio desde los Balcony Seats.</p>
       <p data-es="Asientos preferentes para disfrutar de la mejor visibilidad del terreno de juego: primera y segunda fila de la segunda gradería, con acceso exclusivo a la sala VIP del primer anillo. Un espacio premium con servicio de catering de alta calidad, diseñado para ofrecer una experiencia exclusiva y memorable, ideal tanto para empresas que buscan generar nuevas conexiones y oportunidades de negocio como para particulares que desean disfrutar del evento con el máximo confort y una atención personalizada." data-en="Premium seats offering the best views of the pitch, located in the first and second rows of the second tier, with exclusive access to the VIP lounge on the first VIP ring. A premium space with high-quality catering, designed to deliver an exclusive and memorable experience, ideal for companies looking to build new connections and business opportunities, as well as for individuals who want to enjoy each event with maximum comfort and personalised service." data-ca="Seients preferents per gaudir de la millor visibilitat del terreny de joc: primera i segona fila de la segona graderia, amb accés exclusiu a la sala VIP del primer anell. Un espai premium amb servei de càtering d'alta qualitat, dissenyat per oferir una experiència exclusiva i memorable, ideal tant per a empreses que busquen generar noves connexions i oportunitats de negoci com per a particulars que volen gaudir de cada esdeveniment amb el màxim confort i una atenció personalitzada.">Asientos preferentes para disfrutar de la mejor visibilidad del terreno de juego: primera y segunda fila de la segunda gradería, con acceso exclusivo a la sala VIP del primer anillo. Un espacio premium con servicio de catering de alta calidad, diseñado para ofrecer una experiencia exclusiva y memorable, ideal tanto para empresas que buscan generar nuevas conexiones y oportunidades de negocio como para particulares que desean disfrutar del evento con el máximo confort y una atención personalizada.</p>
       <p class="product-desc__highlight" data-es="Descubre todo sobre los nuevos asientos Balcony del Spotify Camp Nou." data-en="Discover everything about the new Balcony at Spotify Camp Nou." data-ca="Descobreix-ho tot sobre els nous Balcony de l'Spotify Camp Nou.">Descubre todo sobre los nuevos asientos Balcony del Spotify Camp Nou.</p>
-      <p data-es="Regístrate y uno de nuestros asesores se pondrá en contacto contigo para resolver tus dudas y ayudarte a encontrar la opción VIP del nuevo Spotify Camp Nou que mejor se adapte a ti." data-en="Register your interest and one of our advisors will contact you to answer your questions and help you find the VIP option at the new Spotify Camp Nou that best suits your needs." data-ca="Registra't i un dels nostres assessors es posarà en contacte amb tu per resoldre els teus dubtes i ajudar-te a trobar l'opció VIP del nou Spotify Camp Nou que millor s'adapti a les teves necessitats.">Regístrate y uno de nuestros asesores se pondrá en contacto contigo para resolver tus dudas y ayudarte a encontrar la opción VIP del nuevo Spotify Camp Nou que mejor se adapte a ti.</p>
     </div>
     <a href="#" class="product-desc__cta" data-es="Contacta con nosotros →" data-en="Contact us →" data-ca="Contacta amb nosaltres →">Contacta con nosotros →</a>
   </div>
@@ -205,6 +473,50 @@
     <div class="highlight-item">
       <p class="highlight-item__label" data-es="Modelo de contratación" data-en="Contract model" data-ca="Model de contractació">Modelo de contratación</p>
       <p class="highlight-item__value" data-es="Titularidad exclusiva · Canon de Acceso" data-en="Exclusive ownership · Access Fee" data-ca="Titularitat exclusiva · Cànon d'Accés">Titularidad exclusiva · Canon de Acceso</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- CANON DE ACCESO -->
+<div class="canon-section">
+  <div class="canon-section__inner">
+
+    <!-- LEFT: title + intro -->
+    <div class="canon-left">
+      <p class="canon-bridge" data-es="¿Cómo funciona?" data-en="How does it work?" data-ca="Com funciona?">¿Cómo funciona?</p>
+      <p class="canon-eyebrow" data-es="Canon de Acceso" data-en="Access Fee" data-ca="Cànon d'Accés">Canon de Acceso</p>
+      <p class="canon-desc" data-es="Un Canon de Acceso en el FC Barcelona es un pago único que otorga derechos específicos a largo plazo sobre un producto de hospitality VIP en el Spotify Camp Nou. Este canon concede el acceso y el derecho a comprar la cuota VIP de temporada cada año, garantizando tu lugar en uno de los recintos más icónicos del deporte mundial." data-en="An Access Fee at FC Barcelona is a one-time payment that grants specific long-term rights to a VIP hospitality product at Spotify Camp Nou. It provides access and the right to purchase the annual VIP season fee each year, securing your place in one of the most iconic venues in world sport." data-ca="Un Cànon d'Accés al FC Barcelona és un pagament únic que atorga drets específics a llarg termini sobre un producte d'hospitality VIP a l'Spotify Camp Nou. Aquest cànon concedeix l'accés i el dret a comprar la quota VIP de temporada cada any, garantint el teu lloc en un dels recintes més icònics de l'esport mundial.">Un Canon de Acceso en el FC Barcelona es un pago único que otorga derechos específicos a largo plazo sobre un producto de hospitality VIP en el Spotify Camp Nou. Este canon concede el acceso y el derecho a comprar la cuota VIP de temporada cada año, garantizando tu lugar en uno de los recintos más icónicos del deporte mundial.</p>
+    </div>
+
+    <!-- RIGHT: 3 cards -->
+    <div class="canon-cards">
+
+      <div class="canon-card">
+        <div class="canon-card__icon">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg>
+        </div>
+        <h3 class="canon-card__title" data-es="Derechos de reventa partido a partido" data-en="Match-by-match resale rights" data-ca="Drets de revenda partit a partit">Derechos de reventa partido a partido</h3>
+        <p class="canon-card__text" data-es="Si no puedes asistir a un partido, puedes ceder tu asiento al Club para que lo gestione y comercialice en tu nombre. El FC Barcelona se encarga de la venta partido a partido, garantizando que tu activo siga generando valor incluso cuando no lo utilizas." data-en="If you cannot attend a match, you can assign your seat to the Club to manage and sell on your behalf. FC Barcelona handles the match-by-match sale, ensuring your asset continues to generate value even when you are not using it." data-ca="Si no pots assistir a un partit, pots cedir el teu seient al Club perquè el gestioni i el comercialitzi en el teu nom. El FC Barcelona s'encarrega de la venda partit a partit, garantint que el teu actiu continuï generant valor fins i tot quan no l'utilitzes.">Si no puedes asistir a un partido, puedes ceder tu asiento al Club para que lo gestione y comercialice en tu nombre. El FC Barcelona se encarga de la venta partido a partido, garantizando que tu activo siga generando valor incluso cuando no lo utilizas.</p>
+      </div>
+
+      <div class="canon-card">
+        <div class="canon-card__icon">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+        </div>
+        <h3 class="canon-card__title" data-es="Acceso al Barça Business Club" data-en="Access to the Barça Business Club" data-ca="Accés al Barça Business Club">Acceso al Barça Business Club</h3>
+        <p class="canon-card__text" data-es="Como titular VIP accedes al Barça Business Club: una red empresarial exclusiva del FC Barcelona con eventos de networking, aplicación oficial para conectar con otros miembros, tarifas preferentes en experiencias VIP y beneficios adicionales del Club." data-en="As a VIP holder you gain access to the Barça Business Club: an exclusive FC Barcelona business network with networking events, an official app to connect with other members, preferential rates on VIP experiences and additional Club benefits." data-ca="Com a titular VIP accedeixis al Barça Business Club: una xarxa empresarial exclusiva del FC Barcelona amb esdeveniments de networking, aplicació oficial per connectar amb altres membres, tarifes preferents en experiències VIP i beneficis addicionals del Club.">Como titular VIP accedes al Barça Business Club: una red empresarial exclusiva del FC Barcelona con eventos de networking, aplicación oficial para conectar con otros miembros, tarifes preferentes en experiencias VIP y beneficios adicionales del Club.</p>
+      </div>
+
+      <div class="canon-card">
+        <div class="canon-card__icon">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+        </div>
+        <h3 class="canon-card__title" data-es="Transferible / Vendible" data-en="Transferable / Sellable" data-ca="Transferible / Venible">Transferible / Vendible</h3>
+        <p class="canon-card__text" data-es="El Canon de Acceso puede transferirse a familiares, amigos o terceros, o revenderse sujeto a las políticas del FC Barcelona." data-en="The Access Fee can be transferred to family members, friends or third parties, or resold subject to FC Barcelona's policies." data-ca="El Cànon d'Accés pot transferir-se a familiars, amics o tercers, o revendres subjecte a les polítiques del FC Barcelona.">El Canon de Acceso puede transferirse a familiares, amigos o terceros, o revenderse sujeto a las políticas del FC Barcelona.</p>
+        <p class="canon-card__text" data-es="Esto proporciona flexibilidad y potencial valor a largo plazo, otorgándole control sobre su activo más allá del uso personal." data-en="This provides flexibility and long-term value potential, giving you control over your asset beyond personal use." data-ca="Això proporciona flexibilitat i potencial valor a llarg termini, atorgant-li control sobre el seu actiu més enllà de l'ús personal.">Esto proporciona flexibilidad y potencial valor a largo plazo, otorgándole control sobre su activo más allá del uso personal.</p>
+      </div>
+
     </div>
   </div>
 </div>
@@ -339,5 +651,111 @@ function setLang(lang) {
   document.documentElement.lang = lang === 'ca' ? 'ca' : lang === 'en' ? 'en' : 'es';
 }
 </script>
+<!-- FORM SECTION -->
+<div class="form-section">
+  <div class="form-section__inner">
+    <div class="form-section__left">
+      <p class="form-section__eyebrow" data-es="Contacta con nosotros" data-en="Contact us" data-ca="Contacta amb nosaltres">Contacta con nosotros</p>
+      <h2 class="form-section__title" data-es="Regístrate y descubre las zonas VIP del Spotify Camp Nou" data-en="Register and discover the VIP areas at Spotify Camp Nou" data-ca="Registra't i descobreix les zones VIP de l'Spotify Camp Nou">Regístrate y descubre las zonas VIP del Spotify Camp Nou</h2>
+      <p class="form-section__desc" data-es="Apúntate ahora y nos pondremos en contacto contigo para darte toda la información sobre las oportunidades VIP y las zonas más exclusivas." data-en="Register now and we will contact you to provide all the information about VIP opportunities and the most exclusive areas." data-ca="Apunta't ara i ens posarem en contacte amb tu per donar-te tota la informació sobre les oportunitats VIP i les zones més exclusives.">Apúntate ahora y nos pondremos en contacto contigo para darte toda la información sobre las oportunidades VIP y las zonas más exclusivas.</p>
+    </div>
+    <div class="form-section__right">
+      <form action="https://b2bforms.fcbarcelona.com/vip-spotify-camp-nou-spa-ok" name="subscribeForm" id="smartcapture-block-t7xz69r3lzc" class="vip-form" method="POST">
+
+        <input id="Fecha" name="Fecha" type="hidden" value="">
+        <input id="Fechaaño" name="Fechaaño" type="hidden" value="">
+        <input id="IsMobileDevice" name="IsMobileDevice" type="hidden" value="0">
+        <input name="Negocio" type="hidden" value="B2B">
+        <input name="Tipo" type="hidden" value="Client Directe">
+        <input name="Subtipo" type="hidden" value="Empresa">
+        <input name="Area" type="hidden" value="Hospitality">
+        <input name="Observaciones" type="hidden" value="Campaña Google/web">
+        <input name="Tipo de evento" type="hidden" value="B2B Barca Business">
+        <input name="Form" type="hidden" value="B2B_VIP-Spotify-Camp-Nou_SPA">
+
+        <div class="vip-form__row">
+          <div class="vip-form__field">
+            <label for="Name">Nombre *</label>
+            <input type="text" id="Name" name="Name" required placeholder="Tu nombre">
+          </div>
+          <div class="vip-form__field">
+            <label for="Surnames">Apellidos *</label>
+            <input type="text" id="Surnames" name="Surnames" required placeholder="Tus apellidos">
+          </div>
+        </div>
+
+        <div class="vip-form__row">
+          <div class="vip-form__field">
+            <label for="Email">Correo electrónico *</label>
+            <input type="email" id="Email" name="Email" required placeholder="tu@email.com">
+          </div>
+          <div class="vip-form__field vip-form__field--phone">
+            <label for="Mobile">Teléfono *</label>
+            <div class="vip-form__phone-row">
+              <select name="Prefijo" class="vip-form__prefix">
+                <option value="+34" selected>+34 ES</option>
+                <option value="+1">+1 US</option>
+                <option value="+44">+44 UK</option>
+                <option value="+33">+33 FR</option>
+                <option value="+49">+49 DE</option>
+                <option value="+39">+39 IT</option>
+                <option value="+31">+31 NL</option>
+                <option value="+351">+351 PT</option>
+                <option value="+52">+52 MX</option>
+                <option value="+54">+54 AR</option>
+                <option value="+55">+55 BR</option>
+                <option value="+57">+57 CO</option>
+                <option value="+56">+56 CL</option>
+                <option value="+971">+971 AE</option>
+                <option value="+966">+966 SA</option>
+                <option value="+81">+81 JP</option>
+                <option value="+86">+86 CN</option>
+                <option value="+91">+91 IN</option>
+              </select>
+              <input type="tel" id="Mobile" name="Mobile" required placeholder="600 000 000">
+            </div>
+          </div>
+        </div>
+
+        <div class="vip-form__group">
+          <label class="vip-form__group-label">Interés en: *</label>
+          <div class="vip-form__checks">
+            <label class="vip-form__check"><input type="checkbox" name="Interes" value="Asiento VIP para un partido"> Asiento VIP para un partido</label>
+            <label class="vip-form__check"><input type="checkbox" name="Interes" value="Asiento VIP para la temporada completa"> Asiento VIP temporada completa</label>
+            <label class="vip-form__check"><input type="checkbox" name="Interes" value="Información general"> Información general</label>
+          </div>
+        </div>
+
+        <div class="vip-form__group">
+          <label class="vip-form__group-label">Producto de interés: *</label>
+          <div class="vip-form__checks">
+            <label class="vip-form__check"><input type="checkbox" name="ProductoInteres" value="Asientos Balcony desde 8.000€"> Asientos Balcony desde 8.000€</label>
+            <label class="vip-form__check"><input type="checkbox" name="ProductoInteres" value="Asientos Pitch Row desde 10.000€"> Asientos Pitch Row desde 10.000€</label>
+            <label class="vip-form__check"><input type="checkbox" name="ProductoInteres" value="Asientos Players Zone desde 21.500€"> Asientos Players Zone desde 21.500€</label>
+          </div>
+        </div>
+
+        <div class="vip-form__legal">
+          <label class="vip-form__check">
+            <input type="checkbox" name="Terms" required>
+            He leído y acepto la <a href="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/70/B2B_Sopar_Nadal_Politica_Privacidad_SPA.pdf" target="_blank">Política de Privacidad</a>
+          </label>
+        </div>
+
+        <button type="submit" class="vip-form__submit">Enviar solicitud →</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Set date fields
+  var date = new Date();
+  var MM = date.getUTCMonth()+1, DD = date.getUTCDate(), YYYY = date.getUTCFullYear();
+  var h = date.getUTCHours(), m = date.getUTCMinutes();
+  document.getElementById("Fecha").value = MM+"/"+DD+"/"+YYYY+" "+h+":"+m;
+  document.getElementById("Fechaaño").value = YYYY;
+</script>
+
 </body>
 </html>
